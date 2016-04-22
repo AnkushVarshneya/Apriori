@@ -278,7 +278,7 @@ public class View extends JPanel {
 										GridBagConstraints.NORTH));
 		this.add(this.stepLabel);
 
-		this.stepField = new JTextArea(1,56);
+		this.stepField = new JTextArea(1,50);
 		this.stepField.setEditable(false);
 		this.stepField.setFont(new Font(	Font.MONOSPACED,
 											this.stepField.getFont().getStyle(),
