@@ -41,8 +41,9 @@ public class Aprori {
 
 		// set stat
 		app.getModel()
-				.setStats("Took :" + ((System.currentTimeMillis() - startTime) / 1000.0) + " seconds\n" + "Processed: "
-						+ candidateSetsProcessed + " Candidate set(s)\n" + "Min Support: "
+				.setStats("Time Taken:" + ((System.currentTimeMillis() - startTime) / 1000.0) + " seconds\n"
+						+ "Purning: " + (app.getModel().isPrune() ? "Enabled" : "Disabled") + "\n" + "Processed: "
+						+ candidateSetsProcessed + " Candidate set(s) \n" + "Min Support: "
 						+ app.getModel().getMinSupport() * 100.0 + " %\n" + "Min Confidence: "
 						+ app.getModel().getMinConfidence() * 100.0 + " %\n" + "File Selected: "
 						+ (app.getModel().getFile() == null ? "" : app.getModel().getFile().getName()) + "\n");

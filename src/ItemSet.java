@@ -10,31 +10,21 @@ import java.util.Iterator;
 import java.util.TreeSet;
 
 public class ItemSet implements Comparable<ItemSet> {
-	private TreeSet<String> set; // the set
-	private int support; // the support as a number (not a percentage)
+	private TreeSet<String>	set; 		// the set
+	private int 			support;	// the support as a number (not a percentage)
+
+	public TreeSet<String> 	getSet() 		{ return set; }
+	public int 				getSupport() 	{ return support; }
+
+	public void setSet(TreeSet<String> set) { this.set = set; }
+	public void setSupport(int support) 	{ this.support = support; }
 
 	public ItemSet(TreeSet<String> set, int support) {
 		super();
 		this.set = new TreeSet<String>(set);
 		this.support = support;
 	}
-
-	public TreeSet<String> getSet() {
-		return set;
-	}
-
-	public void setSet(TreeSet<String> set) {
-		this.set = set;
-	}
-
-	public int getSupport() {
-		return support;
-	}
-
-	public void setSupport(int support) {
-		this.support = support;
-	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -133,23 +133,26 @@ public class View extends JPanel {
 										GridBagConstraints.NORTH));
 		this.add(this.selectFileButton);
 		
-		this.runButton = new JButton("Run Algorithm");
+
+		this.pruneButton = new JToggleButton();
+		((GridBagLayout) this.getLayout()).setConstraints(
+			this.pruneButton,
+			this.makeConstraints(	0, 5, 1, 1, 0, 0,
+									new Insets(2, 4, 2, 2),
+									GridBagConstraints.HORIZONTAL,
+									GridBagConstraints.NORTH));
+		this.add(this.pruneButton);
+		
+		this.runButton = new JButton("Run");
 		((GridBagLayout) this.getLayout()).setConstraints(
 				this.runButton,
-				this.makeConstraints(	0, 5, 1, 1, 0, 0,
+				this.makeConstraints(	0, 6, 1, 1, 0, 0,
 										new Insets(2, 4, 2, 2),
 										GridBagConstraints.HORIZONTAL,
 										GridBagConstraints.NORTH));
 		this.add(this.runButton);
 		
-		this.pruneButton = new JToggleButton();
-		((GridBagLayout) this.getLayout()).setConstraints(
-			this.pruneButton,
-			this.makeConstraints(	0, 6, 1, 1, 0, 0,
-									new Insets(2, 4, 2, 2),
-									GridBagConstraints.HORIZONTAL,
-									GridBagConstraints.NORTH));
-		this.add(this.pruneButton);
+
 
 
 		this.shopButton = new JButton("Shop");
@@ -275,7 +278,7 @@ public class View extends JPanel {
 										GridBagConstraints.NORTH));
 		this.add(this.stepLabel);
 
-		this.stepField = new JTextArea(1, 56);
+		this.stepField = new JTextArea(1,56);
 		this.stepField.setEditable(false);
 		this.stepField.setFont(new Font(	Font.MONOSPACED,
 											this.stepField.getFont().getStyle(),

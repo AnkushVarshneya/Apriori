@@ -10,9 +10,17 @@ import java.util.Iterator;
 import java.util.TreeSet;
 
 public class AssociationRule implements Comparable<AssociationRule> {
-	private TreeSet<String> leftSide; // Left hand side of the rules
-	private TreeSet<String> rightSide; // Right Side of the rule
-	private double confidence; // the confidence
+	private TreeSet<String> leftSide; 	// Left hand side of the rules
+	private TreeSet<String> rightSide; 	// Right Side of the rule
+	private double 			confidence; // the confidence
+
+	public TreeSet<String> 	getLeftSide() 				{ return leftSide; }
+	public TreeSet<String> 	getRightSide() 				{ return rightSide; }
+	public double 			getConfidence()				{ return confidence; }
+
+	public void setLeftSide(TreeSet<String> leftSide)	{ this.leftSide = leftSide;	}
+	public void setRightSide(TreeSet<String> rightSide) { this.rightSide = rightSide; }
+	public void setConfidence(double confidence)		{ this.confidence = confidence; }
 
 	public AssociationRule(TreeSet<String> leftSide, TreeSet<String> rightSide, double confidence) {
 		super();
@@ -21,33 +29,9 @@ public class AssociationRule implements Comparable<AssociationRule> {
 		this.confidence = confidence;
 	}
 
-	public TreeSet<String> getRightSide() {
-		return rightSide;
-	}
-
-	public void setRightSide(TreeSet<String> rightSide) {
-		this.rightSide = rightSide;
-	}
-
-	public TreeSet<String> getLeftSide() {
-		return leftSide;
-	}
-
-	public void setLeftSide(TreeSet<String> leftSide) {
-		this.leftSide = leftSide;
-	}
-
-	public double getConfidence() {
-		return confidence;
-	}
-
-	public void setConfidence(double confidence) {
-		this.confidence = confidence;
-	}
-
 	@Override
 	public String toString() {
-		return leftSide + " --> " + rightSide;
+		return leftSide + " ==> " + rightSide;
 	}
 
 	@Override
